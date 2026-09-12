@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  # ===========================================================================
+  # 1. MySQL 8.0 Relational Database Service
+  # ===========================================================================
+  mysql:
+    image: mysql:8.0
+    container_name: portfolio-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-rootpassword}
+      MYSQL_DATABASE: portfolio_db
+      MYSQL_USER: ${DB_USERNAME:-portfolio_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-portfolio_pass}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./backend/src/main/resources/schema.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - portfolio-network
+
+  # ===========================================================================
+  # 2. Spring Boot REST API Backend Service
+  # ===========================================================================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: portfolio-backend
+    restart: always
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/portfolio_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      DB_USERNAME: ${DB_USERNAME:-portfolio_user}
+      DB_PASSWORD: ${DB_PASSWORD:-portfolio_pass}
+      JWT_SECRET: ${JWT_SECRET:-404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970337336763979244226452948404D6351655468576D5A7134743777217A25432A}
+      JWT_EXPIRATION_MS: 86400000
+      CORS_ALLOWED_ORIGINS: http://localhost:5173,http://localhost:3000,https://alexandervance.dev
+    ports:
+      - "8080:8080"
+    networks:
+      - portfolio-network
+
+networks:
+  portfolio-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+    driver: local

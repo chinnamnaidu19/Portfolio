@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="tameBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4338ca" />
+      <stop offset="100%" stop-color="#312e81" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#tameBg)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <g stroke="#ffffff" stroke-opacity="0.07" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="450"/>
+    <line x1="300" y1="0" x2="300" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="500" y1="0" x2="500" y2="450"/>
+    <line x1="600" y1="0" x2="600" y2="450"/>
+    <line x1="700" y1="0" x2="700" y2="450"/>
+    <line x1="0" y1="75" x2="800" y2="75"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="225" x2="800" y2="225"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="375" x2="800" y2="375"/>
+  </g>
+
+  <!-- Main Timetable Dashboard Preview Container -->
+  <rect x="80" y="60" width="640" height="330" rx="16" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1.5"/>
+  
+  <!-- App Header Bar in Preview -->
+  <rect x="80" y="60" width="640" height="48" rx="16" fill="#1e1b4b" fill-opacity="0.6"/>
+  <circle cx="110" cy="84" r="6" fill="#ef4444" />
+  <circle cx="128" cy="84" r="6" fill="#f59e0b" />
+  <circle cx="146" cy="84" r="6" fill="#10b981" />
+  <text x="175" y="89" fill="#e0e7ff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600">TAME — Timetable Allocation &amp; Management Environment</text>
+  
+  <!-- Timetable Grid Cards in Preview -->
+  <!-- Mon Col -->
+  <rect x="105" y="125" width="130" height="70" rx="10" fill="#4f46e5" fill-opacity="0.4" stroke="#818cf8" stroke-width="1"/>
+  <text x="117" y="148" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="700">CS301: Algorithms</text>
+  <text x="117" y="166" fill="#c7d2fe" font-family="sans-serif" font-size="10">Room 402 • 09:00 AM</text>
+  <text x="117" y="182" fill="#a5b4fc" font-family="monospace" font-size="9">Prof. Sharma</text>
+
+  <!-- Tue Col -->
+  <rect x="250" y="125" width="130" height="70" rx="10" fill="#059669" fill-opacity="0.4" stroke="#34d399" stroke-width="1"/>
+  <text x="262" y="148" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="700">CS305: DB Systems</text>
+  <text x="262" y="166" fill="#a7f3d0" font-family="sans-serif" font-size="10">Lab 2 • 10:30 AM</text>
+  <text x="262" y="182" fill="#6ee7b7" font-family="monospace" font-size="9">Conflict-Free ✓</text>
+
+  <!-- Wed Col -->
+  <rect x="395" y="125" width="130" height="70" rx="10" fill="#d97706" fill-opacity="0.4" stroke="#fbbf24" stroke-width="1"/>
+  <text x="407" y="148" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="700">CS308: Networks</text>
+  <text x="407" y="166" fill="#fef3c7" font-family="sans-serif" font-size="10">Hall A • 01:00 PM</text>
+  <text x="407" y="182" fill="#fde68a" font-family="monospace" font-size="9">Workload Balanced</text>
+
+  <!-- Thu Col -->
+  <rect x="540" y="125" width="155" height="70" rx="10" fill="#7c3aed" fill-opacity="0.4" stroke="#c084fc" stroke-width="1"/>
+  <text x="552" y="148" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="700">CS310: Full Stack</text>
+  <text x="552" y="166" fill="#ede9fe" font-family="sans-serif" font-size="10">Software Lab • 02:30 PM</text>
+  <text x="552" y="182" fill="#ddd6fe" font-family="monospace" font-size="9">Spring Boot + React</text>
+
+  <!-- Bottom Row Blocks -->
+  <rect x="105" y="210" width="275" height="155" rx="12" fill="#1e1b4b" fill-opacity="0.5" stroke="#6366f1" stroke-width="1"/>
+  <text x="125" y="238" fill="#818cf8" font-family="sans-serif" font-size="13" font-weight="700">Constraint Solver Engine</text>
+  <text x="125" y="262" fill="#e0e7ff" font-family="sans-serif" font-size="11">✓ Zero Faculty Clashes</text>
+  <text x="125" y="285" fill="#e0e7ff" font-family="sans-serif" font-size="11">✓ Laboratory &amp; Classroom Capacity Match</text>
+  <text x="125" y="308" fill="#e0e7ff" font-family="sans-serif" font-size="11">✓ Departmental Section Alignment</text>
+  <text x="125" y="331" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="600">✓ Optimization Heuristics Active</text>
+
+  <rect x="395" y="210" width="300" height="155" rx="12" fill="#1e1b4b" fill-opacity="0.5" stroke="#6366f1" stroke-width="1"/>
+  <text x="415" y="238" fill="#818cf8" font-family="sans-serif" font-size="13" font-weight="700">Resource Allocation Status</text>
+  <rect x="415" y="255" width="260" height="10" rx="5" fill="#312e81"/>
+  <rect x="415" y="255" width="235" height="10" rx="5" fill="#10b981"/>
+  <text x="415" y="285" fill="#c7d2fe" font-family="sans-serif" font-size="11">Faculty Utilization: 92%</text>
+  <text x="415" y="308" fill="#c7d2fe" font-family="sans-serif" font-size="11">Classroom Occupancy: Optimal</text>
+  <text x="415" y="331" fill="#e0e7ff" font-family="monospace" font-size="11">Java • Spring Boot • MySQL • React</text>
+</svg>

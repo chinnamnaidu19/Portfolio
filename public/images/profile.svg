@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  
+  <!-- Subtle circular grid / ring -->
+  <circle cx="300" cy="300" r="260" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="8 8"/>
+  <circle cx="300" cy="300" r="220" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="3"/>
+  
+  <!-- Silhouette head & shoulders -->
+  <circle cx="300" cy="225" r="85" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="2"/>
+  <path d="M165 470 C175 365, 425 365, 435 470 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="2"/>
+  
+  <!-- Badge banner -->
+  <rect x="150" y="275" width="300" height="56" rx="28" fill="url(#accent)"/>
+  <text x="300" y="310" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">YOUR PHOTO HERE</text>
+  
+  <text x="300" y="525" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#64748B" text-anchor="middle">Place your image at /public/images/profile.jpg</text>
+</svg>
